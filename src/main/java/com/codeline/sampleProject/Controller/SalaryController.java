@@ -1,8 +1,10 @@
 package com.codeline.sampleProject.Controller;
 
 import com.codeline.sampleProject.Models.Salary;
+import com.codeline.sampleProject.ResponseObjects.GetSalaryResponse;
 import com.codeline.sampleProject.Service.SalaryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +22,13 @@ import java.util.List;
         public void saveSalary(Salary salary) {
             createSalary();
         }
+
+        @RequestMapping("salary/get/{salaryId}")
+        public GetSalaryResponse createSalary (@PathVariable Long salaryId) {
+            return salaryService.getSalaryById(salaryId);
+        }
+
+
 
         @RequestMapping("salary/get")
         public List<Salary> getSalary() {return salaryService.getSalary();}
