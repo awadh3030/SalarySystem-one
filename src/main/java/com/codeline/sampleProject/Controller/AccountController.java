@@ -73,5 +73,10 @@ public class AccountController {
     }
 
 
+    @RequestMapping("account/delete/{Id}")
+    public void deleteeaccount (@PathVariable Long Id) {
+        accountService.deleteAccountById(Id);
+    }
+
 
 }
