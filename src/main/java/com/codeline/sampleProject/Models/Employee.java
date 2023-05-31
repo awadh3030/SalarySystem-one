@@ -21,7 +21,6 @@ public class Employee extends BaseEntity {
     String designation;
     Double salary;
     String department;
-
     String companyName;
 
     String gender;
