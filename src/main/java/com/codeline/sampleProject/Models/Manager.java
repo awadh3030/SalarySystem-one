@@ -23,7 +23,6 @@ public class Manager extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL)
     List<Employee> team;
     String department;
-
     String teamName;
 
 
