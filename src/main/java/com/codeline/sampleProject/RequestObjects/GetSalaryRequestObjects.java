@@ -9,4 +9,5 @@ public class GetSalaryRequestObjects {
     Double overTimeAmount;
 
 
+
 }
