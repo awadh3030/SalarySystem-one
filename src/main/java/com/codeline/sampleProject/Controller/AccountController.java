@@ -65,5 +65,4 @@ public class AccountController {
     public void deleteeaccount (@PathVariable Long Id) {
         accountService.deleteAccountById(Id);
     }
-
 }
