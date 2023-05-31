@@ -15,7 +15,6 @@ public class Employee extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-
     @Column(name = "employee_name")
     String name;
     String designation;
