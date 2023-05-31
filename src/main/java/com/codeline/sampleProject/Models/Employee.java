@@ -19,7 +19,6 @@ public class Employee extends BaseEntity {
     @Column(name = "employee_name")
     String name;
     String designation;
-
     Double salary;
 
     String department;
