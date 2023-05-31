@@ -25,5 +25,4 @@ public class Manager extends BaseEntity {
     String department;
     String teamName;
 
-
 }
