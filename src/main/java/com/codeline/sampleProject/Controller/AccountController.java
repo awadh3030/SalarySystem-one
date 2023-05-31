@@ -51,7 +51,6 @@ public class AccountController {
         accountService.saveAccount(account);
 
     }
-
     @GetMapping("account/query")
     @ResponseBody
     public String getaccountQueryString(@RequestParam String a,@RequestParam String b,@RequestParam String c) throws JsonProcessingException {
