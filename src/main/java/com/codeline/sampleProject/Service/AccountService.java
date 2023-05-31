@@ -15,7 +15,6 @@ public class AccountService {
     @Autowired
     AccountRepository accountRepository;
 
-
     public List<Account> getAccounts() {
         return accountRepository.findAll();
     }
