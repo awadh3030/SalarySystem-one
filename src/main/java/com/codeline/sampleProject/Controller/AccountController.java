@@ -48,7 +48,6 @@ public class AccountController {
         account.setCreatedDate(new Date());
         account.setIsActive(true);
         accountService.saveAccount(account);
-
     }
     @GetMapping("account/query")
     @ResponseBody
