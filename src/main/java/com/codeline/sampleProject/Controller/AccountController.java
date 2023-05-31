@@ -53,9 +53,6 @@ public class AccountController {
         account.setIsActive(true);
         accountService.saveAccount(account);
 
-
-
-
     }
 
     @GetMapping("account/query")
