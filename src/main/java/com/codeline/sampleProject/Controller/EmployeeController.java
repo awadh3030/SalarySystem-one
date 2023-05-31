@@ -31,6 +31,5 @@ public class EmployeeController {
         employee.setCreatedDate(new Date());
         employee.setIsActive(true);
         employeeService.saveEmployee(employee);
-
     }
 }
