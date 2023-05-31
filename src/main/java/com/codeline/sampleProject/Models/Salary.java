@@ -17,7 +17,6 @@ public class Salary extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
-
     Double amount;
     String currency;
     Double overTimeAmount;
