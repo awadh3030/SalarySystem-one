@@ -22,7 +22,6 @@ public class Manager extends BaseEntity {
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     @OneToMany(cascade = CascadeType.ALL)
     List<Employee> team;
-
     String department;
 
     String teamName;
