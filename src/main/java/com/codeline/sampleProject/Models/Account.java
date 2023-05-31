@@ -23,7 +23,6 @@ public class Account extends BaseEntity {
     String bankBranch;
     String swiftCode;
     String accountHolderName;
-
     String accountType;
 
     Integer branchCode;
