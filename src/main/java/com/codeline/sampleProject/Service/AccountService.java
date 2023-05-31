@@ -21,7 +21,6 @@ public class AccountService {
 
     public void saveAccount(Account account) {accountRepository.save(account);}
 
-
     public GetAccountResponse getAccountById(Long accountId) {
         Optional<Account> optionalAccount =  accountRepository.findById(accountId);
         if(!optionalAccount.isEmpty())
@@ -30,7 +29,6 @@ public class AccountService {
             GetAccountResponse accountResponse = new GetAccountResponse(account.getBankName(), account.getAccountNumber(), account.getBankBranch());
             return accountResponse;
         }
-
         return null;
 
     }
