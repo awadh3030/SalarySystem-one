@@ -18,7 +18,6 @@ public class Account extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
-
     String bankName;
 
     String accountNumber;
