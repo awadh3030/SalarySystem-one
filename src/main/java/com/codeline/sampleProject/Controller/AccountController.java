@@ -30,7 +30,6 @@ public class AccountController {
         return accountService.getAccounts();
     }
 
-
     @RequestMapping("account/get/{accountId}")
     public GetAccountResponse createAccount (@PathVariable Long accountId) {
         return accountService.getAccountById(accountId);
