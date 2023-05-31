@@ -19,19 +19,12 @@ public class Salary extends BaseEntity {
     Long id;
 
     Double amount;
-
     String currency;
-
     Double overTimeAmount;
-
     Double deductions;
-
     Double healthCareContribution;
-
     Double allowances;
-
     Double bonus;
-
     Double perDiem;
 
 
