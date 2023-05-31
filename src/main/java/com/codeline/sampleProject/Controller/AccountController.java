@@ -59,7 +59,7 @@ public class AccountController {
 
     }
 
-    @GetMapping("account/quer")
+    @GetMapping("account/query")
     @ResponseBody
     public String getaccountQueryString(@RequestParam String a,@RequestParam String b,@RequestParam String c) throws JsonProcessingException {
         Account account = new Account();
@@ -73,7 +73,7 @@ public class AccountController {
     }
 
 
-    @RequestMapping("account/delete/{Id}")
+    @RequestMapping("account/delete/{accountId}")
     public void deleteeaccount (@PathVariable Long Id) {
         accountService.deleteAccountById(Id);
     }
