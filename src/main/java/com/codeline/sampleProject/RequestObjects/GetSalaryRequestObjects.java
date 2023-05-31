@@ -6,5 +6,4 @@ public class GetSalaryRequestObjects {
     String currency;
     Double overTimeAmount;
 
-
 }
