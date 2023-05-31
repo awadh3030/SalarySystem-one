@@ -72,7 +72,6 @@ public class AccountController {
         return s;
     }
 
-
     @RequestMapping("account/delete/{accountId}")
     public void deleteeaccount (@PathVariable Long Id) {
         accountService.deleteAccountById(Id);
