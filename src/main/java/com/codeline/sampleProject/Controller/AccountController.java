@@ -38,7 +38,6 @@ public class AccountController {
         return accountService.getAccountById(accountId);
     }
 
-
     public void createAccount(GetAccountRequestObjects accountRequestObject) {
 
         Account account = new Account();
