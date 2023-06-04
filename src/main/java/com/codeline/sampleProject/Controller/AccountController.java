@@ -1,6 +1,7 @@
 package com.codeline.sampleProject.Controller;
 
 import com.codeline.sampleProject.Models.Account;
+import com.codeline.sampleProject.Models.Employee;
 import com.codeline.sampleProject.RequestObjects.GetAccountRequestObjects;
 import com.codeline.sampleProject.ResponseObjects.GetAccountResponse;
 import com.codeline.sampleProject.Service.AccountService;
@@ -14,24 +15,25 @@ import java.util.List;
 
 @RestController
 public class AccountController {
-@Autowired
+    @Autowired
     AccountService accountService;
 
-//    @RequestMapping("account/create")
+    //    @RequestMapping("account/create")
 //    public void saveAccount (Account account) {
 //       createAccount();
 //   }
     @RequestMapping("account/create")
-    public void saveAccount (@RequestBody GetAccountRequestObjects accountRequestObject) {
+    public void saveAccount(@RequestBody GetAccountRequestObjects accountRequestObject) {
         createAccount(accountRequestObject);
     }
+
     @RequestMapping("account/get")
-    public List<Account> getAccounts () {
+    public List<Account> getAccounts() {
         return accountService.getAccounts();
     }
 
     @RequestMapping("account/get/{accountId}")
-    public GetAccountResponse createAccount (@PathVariable Long accountId) {
+    public GetAccountResponse createAccount(@PathVariable Long accountId) {
         return accountService.getAccountById(accountId);
     }
 
@@ -49,9 +51,10 @@ public class AccountController {
         account.setIsActive(true);
         accountService.saveAccount(account);
     }
+
     @GetMapping("account/query")
     @ResponseBody
-    public String getaccountQueryString(@RequestParam String a,@RequestParam String b,@RequestParam String c) throws JsonProcessingException {
+    public String getaccountQueryString(@RequestParam String a, @RequestParam String b, @RequestParam String c) throws JsonProcessingException {
         Account account = new Account();
         account.setBankName(a);
         account.setAccountNumber(b);
@@ -61,9 +64,16 @@ public class AccountController {
         System.out.print(s);
         return s;
     }
+
     @RequestMapping("account/delete/{accountId}")
-    public void deleteeaccount (@PathVariable Long Id) {
+    public void deleteeaccount(@PathVariable Long Id) {
 
         accountService.deleteAccountById(Id);
+    }
+
+    @RequestMapping(value = "getByAccountNumber")
+    public Account getAccountByAccountNumber(@RequestParam String accountNumber) {
+        return accountService.getAccountByAccountNumber(accountNumber);
+
     }
 }

@@ -1,6 +1,7 @@
 package com.codeline.sampleProject.Service;
 
 import com.codeline.sampleProject.Models.Account;
+import com.codeline.sampleProject.Models.Employee;
 import com.codeline.sampleProject.Repository.AccountRepository;
 import com.codeline.sampleProject.ResponseObjects.GetAccountResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,4 +40,10 @@ public class AccountService {
     public void deleteAccountById(Long accountId) {
         accountRepository.deleteById(accountId);
     }
+
+    public Account getAccountByAccountNumber(String ANumber) {
+        return accountRepository.getAccountByAccountNumber(ANumber);
+    }
+
+
 }
